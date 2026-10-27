@@ -1,98 +1,96 @@
-# 贪吃蛇游戏（命令行版）
+# Snake (Command-Line Version)
 
-一个基于 C 语言开发的经典贪吃蛇游戏，运行在 Windows 命令行环境中。
+A classic Snake game written in C for the Windows console.
 
 ![C](https://img.shields.io/badge/language-C-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
-## 项目简介
+## About
 
-本项目是一个使用 C 语言编写的贪吃蛇游戏，具有完整的游戏逻辑和丰富的功能特性。游戏界面简洁美观，支持多种操作方式和速度调节。
+A console Snake game in C with the full game loop and a few extras: two control schemes, a temporary speed boost, persistent high scores, and adjustable base speed.
 
-## 功能特点
+## Features
 
-- ✅ 经典贪吃蛇游戏玩法
-- ✅ 支持方向键和 WASD 两种控制方式
-- ✅ 长按方向键临时加速功能（2倍速）
-- ✅ 实时得分和最高纪录记录（自动保存到文件）
-- ✅ 可调节基础游戏速度（+/-键）
-- ✅ 暂停/继续功能（P键）
-- ✅ 游戏结束界面显示
-- ✅ 彩色控制台界面
-- ✅ 防止蛇直接掉头的智能控制
+- Classic Snake gameplay
+- Arrow keys or WASD
+- Hold a direction key for a temporary 2× speed boost
+- Live score and high score (saved to a file)
+- Adjustable base speed with `+` / `-`
+- Pause/resume with `P`
+- Game-over screen
+- Colored console output
+- Prevents the snake from reversing directly into itself
 
-## 游戏规则
+## Rules
 
-1. 使用方向键或 WASD 控制蛇的移动方向
-2. 吃到 ★ 可以增加蛇的长度和得分（每吃一个得10分）
-3. 撞到墙壁或自己的身体游戏结束
-4. 按住方向键/WASD 可以临时加速移动
-5. 按 P 键暂停游戏，按任意键继续
-6. 按 + 键加快基础速度，按 - 键减慢基础速度
-7. 按 X 键退出游戏
+1. Use the arrow keys or WASD to steer the snake.
+2. Eating a ★ grows the snake and adds 10 points.
+3. Hitting a wall or your own body ends the game.
+4. Hold a direction key to move faster temporarily.
+5. Press `P` to pause; press any key to resume.
+6. Press `+` to speed up the base speed, `-` to slow it down.
+7. Press `X` to quit.
 
-## 操作说明
+## Controls
 
-| 按键        | 功能              |
+| Key | Action |
 | ----------- | ----------------- |
-| ↑↓←→ / WASD | 控制蛇的移动方向  |
-| 长按方向键  | 临时加速（2倍速） |
-| P           | 暂停/继续游戏     |
-| + / =       | 加快基础速度      |
-| - / _       | 减慢基础速度      |
-| X           | 退出游戏          |
+| ↑↓←→ / WASD | Steer the snake |
+| Hold a direction key | Temporary 2× speed |
+| P | Pause/resume |
+| + / = | Increase base speed |
+| - / _ | Decrease base speed |
+| X | Quit |
 
-## 编译运行
+## Build and Run
 
-### 编译方式
+### Build
 
-使用支持 Windows API 的 C 编译器（如 MinGW、MSVC）编译：
+Use a C compiler that supports the Windows API (MinGW or MSVC):
 
 ```bash
 gcc 贪吃蛇（命令行版）.c -o snake.exe -lmsvcrt
 ```
 
-### 运行方式
-
-直接运行编译生成的可执行文件：
+### Run
 
 ```bash
 snake.exe
 ```
 
-或者双击运行 `a.exe`（已编译好的版本）。
+Or double-click `a.exe` (a prebuilt binary).
 
-## 文件说明
+## Files
 
-- `贪吃蛇（命令行版）.c` - 游戏主源代码
-- `snake_highscore.txt` - 最高得分记录文件
-- `a.exe` - 已编译的可执行文件
+- `贪吃蛇（命令行版）.c` — main source
+- `snake_highscore.txt` — high-score file
+- `a.exe` — prebuilt executable
 
-## 技术实现
+## Implementation
 
-- **语言**: C 语言
-- **窗口控制**: Windows API
-- **字符界面**: 控制台输出
-- **数据存储**: 文件读写（最高分记录）
+- Language: C
+- Window control: Windows API
+- Interface: console output
+- Persistence: file read/write for the high score
 
-## 开发说明
+## Development Notes
 
-本项目代码包含详细的中文注释，适合 C 语言初学者学习参考。代码结构清晰，分为以下几个模块：
+The source has detailed comments in Chinese and is meant partly as a learning reference. It is organized as:
 
-1. **头文件导入** - 标准库和 Windows API
-2. **常量定义** - 游戏参数配置
-3. **数据结构定义** - 蛇、食物、游戏状态
-4. **函数声明** - 游戏功能接口
-5. **主函数** - 游戏主循环
-6. **函数实现** - 各功能模块实现
+1. Includes — standard library and Windows API
+2. Constants — game parameters
+3. Data structures — snake, food, game state
+4. Function declarations
+5. `main` — game loop
+6. Function implementations
 
-## 作者信息
+## Author
 
-**谙弆悕博士（Ailan Anjuxi）**
+**Dr. Ailan Anjuxi (谙弆悕)**
 
-- 邮箱: `anjuxi.ME@outlook.com`
-- SIP电话: `sip:anjuxi@sip.linphone.org`
+- Email: `anjuxi.ME@outlook.com`
+- SIP: `sip:anjuxi@sip.linphone.org`
 
 ---
 
